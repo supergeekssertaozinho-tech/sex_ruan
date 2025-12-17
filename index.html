@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,13 +40,13 @@
             font-size: 2.3rem;
             font-weight: 900;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px rgba(255,255,255,0.7);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
             display: inline-block;
             animation: floatZ 3.2s ease-in-out infinite;
             transform-style: preserve-3d;
         }
 
-        
+
         .sgeek {
             display: flex;
             flex-direction: row;
@@ -97,9 +98,17 @@
 
 
         @keyframes floatZ {
-            0%   { transform: translateZ(0); }
-            50%  { transform: translateZ(22px); }
-            100% { transform: translateZ(0); }
+            0% {
+                transform: translateZ(0);
+            }
+
+            50% {
+                transform: translateZ(22px);
+            }
+
+            100% {
+                transform: translateZ(0);
+            }
         }
 
         /* ===== MAIN ===== */
@@ -176,7 +185,7 @@
             left: 0;
             width: 100%;
             height: 45%;
-            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
             z-index: 2;
         }
 
@@ -187,7 +196,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0,0,0,0.75);
+            background: rgba(0, 0, 0, 0.75);
             display: none;
             justify-content: center;
             align-items: center;
@@ -206,8 +215,13 @@
         }
 
         @keyframes zoomIn {
-            from { transform: scale(0.3); }
-            to   { transform: scale(1); }
+            from {
+                transform: scale(0.3);
+            }
+
+            to {
+                transform: scale(1);
+            }
         }
 
         /* ===== BOTÃO JOGAR AGORA ===== */
@@ -250,7 +264,7 @@
 
         .gas {
             position: absolute;
-            background: radial-gradient(circle, rgba(0,255,0,0.85), rgba(0,120,0,0));
+            background: radial-gradient(circle, rgba(0, 255, 0, 0.85), rgba(0, 120, 0, 0));
             border-radius: 50%;
             filter: blur(8px);
             animation: subir 5s linear infinite;
@@ -258,10 +272,23 @@
         }
 
         @keyframes subir {
-            0%   { transform: translateY(0) translateX(0) scale(0.5); opacity: 0; }
-            10%  { opacity: 1; }
-            60%  { transform: translateY(-140px) translateX(18px) scale(1.3); }
-            100% { transform: translateY(-260px) translateX(-25px) scale(2); opacity: 0; }
+            0% {
+                transform: translateY(0) translateX(0) scale(0.5);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            60% {
+                transform: translateY(-140px) translateX(18px) scale(1.3);
+            }
+
+            100% {
+                transform: translateY(-260px) translateX(-25px) scale(2);
+                opacity: 0;
+            }
         }
 
         /* ===== RESPONSIVIDADE ===== */
@@ -269,9 +296,11 @@
             .grid-imagens {
                 grid-template-columns: 1fr;
             }
+
             .image-viewer-content {
                 width: 90%;
             }
+
             .grid {
                 grid-template-columns: 1fr;
             }
@@ -288,6 +317,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- CONTÊINER DO GÁS -->
@@ -399,7 +429,14 @@
         }
 
         setInterval(criarGas, 70);
+
+
+        //Inserir link
+        document.querySelector("button").addEventListener("click", () => {
+            window.open("https://google.com.br", "_blank");
+        });
     </script>
 
 </body>
+
 </html>
